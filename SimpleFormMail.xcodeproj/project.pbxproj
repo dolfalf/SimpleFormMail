@@ -9,12 +9,23 @@
 /* Begin PBXBuildFile section */
 		1C574B6B1C782DF50052B928 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C574B6A1C782DF50052B928 /* main.m */; };
 		1C574B6E1C782DF50052B928 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C574B6D1C782DF50052B928 /* AppDelegate.m */; };
-		1C574B711C782DF50052B928 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C574B701C782DF50052B928 /* ViewController.m */; };
-		1C574B741C782DF60052B928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C574B721C782DF60052B928 /* Main.storyboard */; };
 		1C574B761C782DF60052B928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C574B751C782DF60052B928 /* Assets.xcassets */; };
 		1C574B791C782DF60052B928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C574B771C782DF60052B928 /* LaunchScreen.storyboard */; };
 		1C574B841C782DF60052B928 /* SimpleFormMailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C574B831C782DF60052B928 /* SimpleFormMailTests.m */; };
 		AC9D8D42D6124A7AC623A693 /* libPods-SimpleFormMail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022E768603257741F942CCFC /* libPods-SimpleFormMail.a */; };
+		BB354BAA1C7AD79700B8E4FD /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BA41C7AD79700B8E4FD /* Base64.m */; };
+		BB354BAB1C7AD79700B8E4FD /* NSData+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BA61C7AD79700B8E4FD /* NSData+Extension.m */; };
+		BB354BAC1C7AD79700B8E4FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BA91C7AD79700B8E4FD /* ViewController.m */; };
+		BB354BAF1C7AD7B100B8E4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB354BAD1C7AD7B100B8E4FD /* Main.storyboard */; };
+		BB354BB11C7AD9B000B8E4FD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB354BB01C7AD9B000B8E4FD /* CoreData.framework */; };
+		BB354BB51C7ADA8E00B8E4FD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BB41C7ADA8E00B8E4FD /* CoreDataManager.m */; };
+		BB354BB81C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB354BB61C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld */; };
+		BB354BC31C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BC01C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m */; };
+		BB354BC41C7ADE1700B8E4FD /* SmtpInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BC21C7ADE1700B8E4FD /* SmtpInfo.m */; };
+		BBA673EF1C7AEEA900380469 /* TempleteContents.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBA673EE1C7AEEA900380469 /* TempleteContents.plist */; };
+		BBA673F11C7AEF7E00380469 /* TempleteTitles.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBA673F01C7AEF7E00380469 /* TempleteTitles.plist */; };
+		BBA673F61C7AF13E00380469 /* TempleteMails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA673F31C7AF13E00380469 /* TempleteMails+CoreDataProperties.m */; };
+		BBA673F71C7AF13E00380469 /* TempleteMails.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA673F51C7AF13E00380469 /* TempleteMails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +44,6 @@
 		1C574B6A1C782DF50052B928 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C574B6C1C782DF50052B928 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C574B6D1C782DF50052B928 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1C574B6F1C782DF50052B928 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1C574B701C782DF50052B928 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1C574B731C782DF60052B928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C574B751C782DF60052B928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C574B781C782DF60052B928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C574B7A1C782DF60052B928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +52,27 @@
 		1C574B851C782DF60052B928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D2317DA82E27E588256006 /* Pods-SimpleFormMail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleFormMail.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleFormMail/Pods-SimpleFormMail.release.xcconfig"; sourceTree = "<group>"; };
 		B0C74676AAD63AC3EE53C329 /* Pods-SimpleFormMail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleFormMail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleFormMail/Pods-SimpleFormMail.debug.xcconfig"; sourceTree = "<group>"; };
+		BB354BA31C7AD79700B8E4FD /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		BB354BA41C7AD79700B8E4FD /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		BB354BA51C7AD79700B8E4FD /* NSData+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Extension.h"; sourceTree = "<group>"; };
+		BB354BA61C7AD79700B8E4FD /* NSData+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Extension.m"; sourceTree = "<group>"; };
+		BB354BA81C7AD79700B8E4FD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BB354BA91C7AD79700B8E4FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB354BAE1C7AD7B100B8E4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SimpleFormMail/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		BB354BB01C7AD9B000B8E4FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BB354BB31C7ADA8E00B8E4FD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		BB354BB41C7ADA8E00B8E4FD /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		BB354BB71C7ADD0600B8E4FD /* UserSettingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserSettingModel.xcdatamodel; sourceTree = "<group>"; };
+		BB354BBF1C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SmtpInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BB354BC01C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SmtpInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BB354BC11C7ADE1700B8E4FD /* SmtpInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmtpInfo.h; sourceTree = "<group>"; };
+		BB354BC21C7ADE1700B8E4FD /* SmtpInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmtpInfo.m; sourceTree = "<group>"; };
+		BBA673EE1C7AEEA900380469 /* TempleteContents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TempleteContents.plist; sourceTree = "<group>"; };
+		BBA673F01C7AEF7E00380469 /* TempleteTitles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TempleteTitles.plist; sourceTree = "<group>"; };
+		BBA673F21C7AF13E00380469 /* TempleteMails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleteMails+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BBA673F31C7AF13E00380469 /* TempleteMails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TempleteMails+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BBA673F41C7AF13E00380469 /* TempleteMails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleteMails.h; sourceTree = "<group>"; };
+		BBA673F51C7AF13E00380469 /* TempleteMails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleteMails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB354BB11C7AD9B000B8E4FD /* CoreData.framework in Frameworks */,
 				AC9D8D42D6124A7AC623A693 /* libPods-SimpleFormMail.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +98,7 @@
 		04BE024A33A1067FAD50A05B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB354BB01C7AD9B000B8E4FD /* CoreData.framework */,
 				022E768603257741F942CCFC /* libPods-SimpleFormMail.a */,
 			);
 			name = Frameworks;
@@ -98,9 +129,10 @@
 			children = (
 				1C574B6C1C782DF50052B928 /* AppDelegate.h */,
 				1C574B6D1C782DF50052B928 /* AppDelegate.m */,
-				1C574B6F1C782DF50052B928 /* ViewController.h */,
-				1C574B701C782DF50052B928 /* ViewController.m */,
-				1C574B721C782DF60052B928 /* Main.storyboard */,
+				BBA673ED1C7AEE7900380469 /* Plist */,
+				BB354BB21C7AD9D600B8E4FD /* CoreData */,
+				BB354BA11C7AD79700B8E4FD /* Lib */,
+				BB354BA71C7AD79700B8E4FD /* Screen */,
 				1C574B751C782DF60052B928 /* Assets.xcassets */,
 				1C574B771C782DF60052B928 /* LaunchScreen.storyboard */,
 				1C574B7A1C782DF60052B928 /* Info.plist */,
@@ -126,6 +158,62 @@
 			path = SimpleFormMailTests;
 			sourceTree = "<group>";
 		};
+		BB354BA11C7AD79700B8E4FD /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BB354BA21C7AD79700B8E4FD /* mcrypt_c */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		BB354BA21C7AD79700B8E4FD /* mcrypt_c */ = {
+			isa = PBXGroup;
+			children = (
+				BB354BA31C7AD79700B8E4FD /* Base64.h */,
+				BB354BA41C7AD79700B8E4FD /* Base64.m */,
+				BB354BA51C7AD79700B8E4FD /* NSData+Extension.h */,
+				BB354BA61C7AD79700B8E4FD /* NSData+Extension.m */,
+			);
+			path = mcrypt_c;
+			sourceTree = "<group>";
+		};
+		BB354BA71C7AD79700B8E4FD /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				BB354BA81C7AD79700B8E4FD /* ViewController.h */,
+				BB354BA91C7AD79700B8E4FD /* ViewController.m */,
+				BB354BAD1C7AD7B100B8E4FD /* Main.storyboard */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		BB354BB21C7AD9D600B8E4FD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BB354BB31C7ADA8E00B8E4FD /* CoreDataManager.h */,
+				BB354BB41C7ADA8E00B8E4FD /* CoreDataManager.m */,
+				BB354BB61C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld */,
+				BB354BBF1C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.h */,
+				BB354BC01C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m */,
+				BB354BC11C7ADE1700B8E4FD /* SmtpInfo.h */,
+				BB354BC21C7ADE1700B8E4FD /* SmtpInfo.m */,
+				BBA673F21C7AF13E00380469 /* TempleteMails+CoreDataProperties.h */,
+				BBA673F31C7AF13E00380469 /* TempleteMails+CoreDataProperties.m */,
+				BBA673F41C7AF13E00380469 /* TempleteMails.h */,
+				BBA673F51C7AF13E00380469 /* TempleteMails.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BBA673ED1C7AEE7900380469 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				BBA673EE1C7AEEA900380469 /* TempleteContents.plist */,
+				BBA673F01C7AEF7E00380469 /* TempleteTitles.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
 		FB43C184BA39314BCBB1F73C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +234,8 @@
 				1C574B621C782DF50052B928 /* Sources */,
 				1C574B631C782DF50052B928 /* Frameworks */,
 				1C574B641C782DF50052B928 /* Resources */,
-				85BEF352AE43D0DD1540B8E9 /* Embed Pods Frameworks */,
 				861ECA0F4271C6D91393F143 /* Copy Pods Resources */,
+				3967CB0619971AD00DCD1A85 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,9 +306,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB354BAF1C7AD7B100B8E4FD /* Main.storyboard in Resources */,
+				BBA673F11C7AEF7E00380469 /* TempleteTitles.plist in Resources */,
 				1C574B791C782DF60052B928 /* LaunchScreen.storyboard in Resources */,
+				BBA673EF1C7AEEA900380469 /* TempleteContents.plist in Resources */,
 				1C574B761C782DF60052B928 /* Assets.xcassets in Resources */,
-				1C574B741C782DF60052B928 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +339,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		85BEF352AE43D0DD1540B8E9 /* Embed Pods Frameworks */ = {
+		3967CB0619971AD00DCD1A85 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,9 +376,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C574B711C782DF50052B928 /* ViewController.m in Sources */,
+				BB354BB51C7ADA8E00B8E4FD /* CoreDataManager.m in Sources */,
+				BB354BB81C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld in Sources */,
+				BBA673F71C7AF13E00380469 /* TempleteMails.m in Sources */,
+				BBA673F61C7AF13E00380469 /* TempleteMails+CoreDataProperties.m in Sources */,
+				BB354BAB1C7AD79700B8E4FD /* NSData+Extension.m in Sources */,
+				BB354BC31C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m in Sources */,
+				BB354BC41C7ADE1700B8E4FD /* SmtpInfo.m in Sources */,
 				1C574B6E1C782DF50052B928 /* AppDelegate.m in Sources */,
+				BB354BAA1C7AD79700B8E4FD /* Base64.m in Sources */,
 				1C574B6B1C782DF50052B928 /* main.m in Sources */,
+				BB354BAC1C7AD79700B8E4FD /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,20 +409,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1C574B721C782DF60052B928 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C574B731C782DF60052B928 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1C574B771C782DF60052B928 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1C574B781C782DF60052B928 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BB354BAD1C7AD7B100B8E4FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB354BAE1C7AD7B100B8E4FD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -493,6 +591,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BB354BB61C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BB354BB71C7ADD0600B8E4FD /* UserSettingModel.xcdatamodel */,
+			);
+			currentVersion = BB354BB71C7ADD0600B8E4FD /* UserSettingModel.xcdatamodel */;
+			path = UserSettingModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1C574B5E1C782DF50052B928 /* Project object */;
 }
