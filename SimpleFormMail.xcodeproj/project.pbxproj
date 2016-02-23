@@ -13,9 +13,12 @@
 		1C574B791C782DF60052B928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C574B771C782DF60052B928 /* LaunchScreen.storyboard */; };
 		1C574B841C782DF60052B928 /* SimpleFormMailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C574B831C782DF60052B928 /* SimpleFormMailTests.m */; };
 		AC9D8D42D6124A7AC623A693 /* libPods-SimpleFormMail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 022E768603257741F942CCFC /* libPods-SimpleFormMail.a */; };
+		BB0E262A1C7BE5B700EFEDC0 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0E26291C7BE5B700EFEDC0 /* TopViewController.m */; };
+		BB302F781C7C3DBC00942B30 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB302F771C7C3DBC00942B30 /* SettingViewController.m */; };
+		BB302F7C1C7C3DDB00942B30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB302F7B1C7C3DDB00942B30 /* ViewController.m */; };
+		BB302F7E1C7C3FE300942B30 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB302F7D1C7C3FE300942B30 /* Setting.storyboard */; };
 		BB354BAA1C7AD79700B8E4FD /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BA41C7AD79700B8E4FD /* Base64.m */; };
 		BB354BAB1C7AD79700B8E4FD /* NSData+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BA61C7AD79700B8E4FD /* NSData+Extension.m */; };
-		BB354BAC1C7AD79700B8E4FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BA91C7AD79700B8E4FD /* ViewController.m */; };
 		BB354BAF1C7AD7B100B8E4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB354BAD1C7AD7B100B8E4FD /* Main.storyboard */; };
 		BB354BB11C7AD9B000B8E4FD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB354BB01C7AD9B000B8E4FD /* CoreData.framework */; };
 		BB354BB51C7ADA8E00B8E4FD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BB41C7ADA8E00B8E4FD /* CoreDataManager.m */; };
@@ -52,12 +55,17 @@
 		1C574B851C782DF60052B928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D2317DA82E27E588256006 /* Pods-SimpleFormMail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleFormMail.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleFormMail/Pods-SimpleFormMail.release.xcconfig"; sourceTree = "<group>"; };
 		B0C74676AAD63AC3EE53C329 /* Pods-SimpleFormMail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleFormMail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleFormMail/Pods-SimpleFormMail.debug.xcconfig"; sourceTree = "<group>"; };
+		BB0E26281C7BE5B700EFEDC0 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		BB0E26291C7BE5B700EFEDC0 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		BB302F761C7C3DBC00942B30 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		BB302F771C7C3DBC00942B30 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		BB302F7A1C7C3DDB00942B30 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BB302F7B1C7C3DDB00942B30 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BB302F7D1C7C3FE300942B30 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		BB354BA31C7AD79700B8E4FD /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		BB354BA41C7AD79700B8E4FD /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		BB354BA51C7AD79700B8E4FD /* NSData+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Extension.h"; sourceTree = "<group>"; };
 		BB354BA61C7AD79700B8E4FD /* NSData+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Extension.m"; sourceTree = "<group>"; };
-		BB354BA81C7AD79700B8E4FD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BB354BA91C7AD79700B8E4FD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BB354BAE1C7AD7B100B8E4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SimpleFormMail/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		BB354BB01C7AD9B000B8E4FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BB354BB31C7ADA8E00B8E4FD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
@@ -158,6 +166,34 @@
 			path = SimpleFormMailTests;
 			sourceTree = "<group>";
 		};
+		BB0E26271C7BE59D00EFEDC0 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				BB0E26281C7BE5B700EFEDC0 /* TopViewController.h */,
+				BB0E26291C7BE5B700EFEDC0 /* TopViewController.m */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		BB302F751C7C3DA400942B30 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				BB302F761C7C3DBC00942B30 /* SettingViewController.h */,
+				BB302F771C7C3DBC00942B30 /* SettingViewController.m */,
+				BB302F7D1C7C3FE300942B30 /* Setting.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		BB302F791C7C3DDB00942B30 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BB302F7A1C7C3DDB00942B30 /* ViewController.h */,
+				BB302F7B1C7C3DDB00942B30 /* ViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		BB354BA11C7AD79700B8E4FD /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,8 +216,9 @@
 		BB354BA71C7AD79700B8E4FD /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				BB354BA81C7AD79700B8E4FD /* ViewController.h */,
-				BB354BA91C7AD79700B8E4FD /* ViewController.m */,
+				BB302F791C7C3DDB00942B30 /* Test */,
+				BB0E26271C7BE59D00EFEDC0 /* Top */,
+				BB302F751C7C3DA400942B30 /* Setting */,
 				BB354BAD1C7AD7B100B8E4FD /* Main.storyboard */,
 			);
 			path = Screen;
@@ -311,6 +348,7 @@
 				1C574B791C782DF60052B928 /* LaunchScreen.storyboard in Resources */,
 				BBA673EF1C7AEEA900380469 /* TempleteContents.plist in Resources */,
 				1C574B761C782DF60052B928 /* Assets.xcassets in Resources */,
+				BB302F7E1C7C3FE300942B30 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,15 +416,17 @@
 			files = (
 				BB354BB51C7ADA8E00B8E4FD /* CoreDataManager.m in Sources */,
 				BB354BB81C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld in Sources */,
+				BB302F781C7C3DBC00942B30 /* SettingViewController.m in Sources */,
 				BBA673F71C7AF13E00380469 /* TempleteMails.m in Sources */,
 				BBA673F61C7AF13E00380469 /* TempleteMails+CoreDataProperties.m in Sources */,
 				BB354BAB1C7AD79700B8E4FD /* NSData+Extension.m in Sources */,
+				BB302F7C1C7C3DDB00942B30 /* ViewController.m in Sources */,
 				BB354BC31C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m in Sources */,
 				BB354BC41C7ADE1700B8E4FD /* SmtpInfo.m in Sources */,
 				1C574B6E1C782DF50052B928 /* AppDelegate.m in Sources */,
+				BB0E262A1C7BE5B700EFEDC0 /* TopViewController.m in Sources */,
 				BB354BAA1C7AD79700B8E4FD /* Base64.m in Sources */,
 				1C574B6B1C782DF50052B928 /* main.m in Sources */,
-				BB354BAC1C7AD79700B8E4FD /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
