@@ -28,6 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self initControls];
+    
     self.title = @"設定";
 
     // Create manager
@@ -52,6 +54,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - private methods
+- (void)initControls {
+    
+    UIBarButtonItem *setting_button = [[UIBarButtonItem alloc] initWithTitle:@"Close"
+                                                                       style:UIBarButtonItemStyleDone
+                                                                      target:self
+                                                                      action:@selector(closeButtonTouched:)];
+    
+    self.navigationItem.leftBarButtonItems = @[setting_button];
+}
+
+#pragma mark - IBAction
+- (void)closeButtonTouched:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (RETableViewSection *)addSmtpControls
 {

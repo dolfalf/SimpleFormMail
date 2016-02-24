@@ -25,10 +25,12 @@
 		BB354BB81C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB354BB61C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld */; };
 		BB354BC31C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BC01C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m */; };
 		BB354BC41C7ADE1700B8E4FD /* SmtpInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BB354BC21C7ADE1700B8E4FD /* SmtpInfo.m */; };
+		BB6006711C7D8A9800D77771 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6006701C7D8A9800D77771 /* UIImage+Extension.m */; };
 		BBA673EF1C7AEEA900380469 /* TempleteContents.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBA673EE1C7AEEA900380469 /* TempleteContents.plist */; };
 		BBA673F11C7AEF7E00380469 /* TempleteTitles.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBA673F01C7AEF7E00380469 /* TempleteTitles.plist */; };
 		BBA673F61C7AF13E00380469 /* TempleteMails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA673F31C7AF13E00380469 /* TempleteMails+CoreDataProperties.m */; };
 		BBA673F71C7AF13E00380469 /* TempleteMails.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA673F51C7AF13E00380469 /* TempleteMails.m */; };
+		BBFDC2A61C7D340800958864 /* StoryboardUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC2A51C7D340800958864 /* StoryboardUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,12 +77,16 @@
 		BB354BC01C7ADE1700B8E4FD /* SmtpInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SmtpInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BB354BC11C7ADE1700B8E4FD /* SmtpInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmtpInfo.h; sourceTree = "<group>"; };
 		BB354BC21C7ADE1700B8E4FD /* SmtpInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmtpInfo.m; sourceTree = "<group>"; };
+		BB60066F1C7D8A9800D77771 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		BB6006701C7D8A9800D77771 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		BBA673EE1C7AEEA900380469 /* TempleteContents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TempleteContents.plist; sourceTree = "<group>"; };
 		BBA673F01C7AEF7E00380469 /* TempleteTitles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TempleteTitles.plist; sourceTree = "<group>"; };
 		BBA673F21C7AF13E00380469 /* TempleteMails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleteMails+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BBA673F31C7AF13E00380469 /* TempleteMails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TempleteMails+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BBA673F41C7AF13E00380469 /* TempleteMails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleteMails.h; sourceTree = "<group>"; };
 		BBA673F51C7AF13E00380469 /* TempleteMails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleteMails.m; sourceTree = "<group>"; };
+		BBFDC2A41C7D340800958864 /* StoryboardUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryboardUtil.h; sourceTree = "<group>"; };
+		BBFDC2A51C7D340800958864 /* StoryboardUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 				BBA673ED1C7AEE7900380469 /* Plist */,
 				BB354BB21C7AD9D600B8E4FD /* CoreData */,
 				BB354BA11C7AD79700B8E4FD /* Lib */,
+				BB60066B1C7D8A4500D77771 /* Util */,
 				BB354BA71C7AD79700B8E4FD /* Screen */,
 				1C574B751C782DF60052B928 /* Assets.xcassets */,
 				1C574B771C782DF60052B928 /* LaunchScreen.storyboard */,
@@ -216,6 +223,8 @@
 		BB354BA71C7AD79700B8E4FD /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				BBFDC2A41C7D340800958864 /* StoryboardUtil.h */,
+				BBFDC2A51C7D340800958864 /* StoryboardUtil.m */,
 				BB302F791C7C3DDB00942B30 /* Test */,
 				BB0E26271C7BE59D00EFEDC0 /* Top */,
 				BB302F751C7C3DA400942B30 /* Setting */,
@@ -241,6 +250,16 @@
 			);
 			path = CoreData;
 			sourceTree = "<group>";
+		};
+		BB60066B1C7D8A4500D77771 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BB60066F1C7D8A9800D77771 /* UIImage+Extension.h */,
+				BB6006701C7D8A9800D77771 /* UIImage+Extension.m */,
+			);
+			name = Util;
+			path = SimpleFormMail/Util;
+			sourceTree = SOURCE_ROOT;
 		};
 		BBA673ED1C7AEE7900380469 /* Plist */ = {
 			isa = PBXGroup;
@@ -414,10 +433,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6006711C7D8A9800D77771 /* UIImage+Extension.m in Sources */,
 				BB354BB51C7ADA8E00B8E4FD /* CoreDataManager.m in Sources */,
 				BB354BB81C7ADD0600B8E4FD /* UserSettingModel.xcdatamodeld in Sources */,
 				BB302F781C7C3DBC00942B30 /* SettingViewController.m in Sources */,
 				BBA673F71C7AF13E00380469 /* TempleteMails.m in Sources */,
+				BBFDC2A61C7D340800958864 /* StoryboardUtil.m in Sources */,
 				BBA673F61C7AF13E00380469 /* TempleteMails+CoreDataProperties.m in Sources */,
 				BB354BAB1C7AD79700B8E4FD /* NSData+Extension.m in Sources */,
 				BB302F7C1C7C3DDB00942B30 /* ViewController.m in Sources */,

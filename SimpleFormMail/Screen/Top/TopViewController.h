@@ -10,6 +10,14 @@
 
 @interface TopViewTableCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *contentLabel;
+@property (nonatomic, weak) IBOutlet UILabel *recipientLabel;
+
+- (void)addTarget:(id)target sendButtonTouched:(SEL)action;
+- (void)addTarget:(id)target copyButtonTouched:(SEL)action;
+- (void)addTarget:(id)target editButtonTouched:(SEL)action;
+
 @end
 
 #pragma mark - TopViewController Class
