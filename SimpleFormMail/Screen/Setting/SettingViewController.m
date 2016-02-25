@@ -8,6 +8,11 @@
 
 #import "SettingViewController.h"
 
+#import "NSData+Extension.h"
+#import "SmtpInfo.h"
+#import <MailCore/MCOConstants.h>
+#import "CoreDataManager.h"
+
 @interface SettingViewController ()
 
 @property (strong, nonatomic) RETableViewManager *manager;
@@ -45,6 +50,46 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    //
+//    CoreDataManager *mgr = [CoreDataManager sharedCoreDataManager];
+    
+    SmtpInfo *model = [SmtpInfo findModel];
+    
+    if (model) {
+        //
+        _usernameItem.value = model.username;
+        _hostnameItem.value = model.hostname;
+        _portItem.value = [NSString stringWithFormat:@"%ld",(long)model.port.integerValue];
+        
+        NSString *dec_password = [model.password AES256DecryptWithKey:kEncryptKeyString];
+        _passwordItem.value = dec_password;
+        
+        _authTypeItem.value = @[@"None"];
+        
+        _authTypeItem.value =
+        model.authType.integerValue == MCOAuthTypeSASLNone  ?       @[@"None"]:
+        model.authType.integerValue == MCOAuthTypeSASLCRAMMD5?      @[@"CRAM-MD5"]:
+        model.authType.integerValue == MCOAuthTypeSASLPlain?        @[@"PLAIN"]:
+        model.authType.integerValue == MCOAuthTypeSASLGSSAPI?       @[@"GSSAPI"]:
+        model.authType.integerValue == MCOAuthTypeSASLDIGESTMD5?    @[@"DIGEST-MD5"]:
+        model.authType.integerValue == MCOAuthTypeSASLLogin?        @[@"LOGIN"]:
+        model.authType.integerValue == MCOAuthTypeSASLSRP?          @[@"Secure Remote Password"]:
+        model.authType.integerValue == MCOAuthTypeSASLNTLM?         @[@"NTLM"]:
+        model.authType.integerValue == MCOAuthTypeSASLKerberosV4?   @[@"Kerberos 4"]:
+        model.authType.integerValue == MCOAuthTypeXOAuth2?          @[@"OAuth2"]:
+        model.authType.integerValue == MCOAuthTypeXOAuth2Outlook?   @[@"OAuth2(outlook.com)"]:@[@"None"];
+        
+        _connectionTypeItem.value =
+        model.connectionType.integerValue == MCOConnectionTypeClear?    0:
+        model.connectionType.integerValue == MCOConnectionTypeStartTLS? 1:
+        model.connectionType.integerValue == MCOConnectionTypeTLS?      2:0;
+        
+        [self.tableView reloadData];
+    }
+}
+
 /*
 #pragma mark - Navigation
 
@@ -58,12 +103,19 @@
 #pragma mark - private methods
 - (void)initControls {
     
-    UIBarButtonItem *setting_button = [[UIBarButtonItem alloc] initWithTitle:@"Close"
+    UIBarButtonItem *close_button = [[UIBarButtonItem alloc] initWithTitle:@"Close"
                                                                        style:UIBarButtonItemStyleDone
                                                                       target:self
                                                                       action:@selector(closeButtonTouched:)];
     
-    self.navigationItem.leftBarButtonItems = @[setting_button];
+    UIBarButtonItem *save_button = [[UIBarButtonItem alloc] initWithTitle:@"Save"
+                                                                     style:UIBarButtonItemStyleDone
+                                                                    target:self
+                                                                    action:@selector(saveButtonTouched:)];
+    
+    self.navigationItem.leftBarButtonItems = @[close_button];
+    
+    self.navigationItem.rightBarButtonItems = @[save_button];
 }
 
 #pragma mark - IBAction
@@ -72,6 +124,46 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)saveButtonTouched:(id)sender {
+    
+    SmtpInfo *model = [SmtpInfo findModel];
+    if (model == nil) {
+        model = [SmtpInfo createModel];
+    }
+    
+    model.username = _usernameItem.value;
+    model.hostname = _hostnameItem.value;
+    model.port = @(_portItem.value.integerValue);
+    
+    NSString *enc_password = [_passwordItem.value AES256EncryptWithKey:kEncryptKeyString];
+    model.password = enc_password;
+    
+    model.authType =
+    [_authTypeItem.value[0] isEqualToString:@"None"]?                   @(MCOAuthTypeSASLNone):
+    [_authTypeItem.value[0] isEqualToString:@"CRAM-MD5"]?               @(MCOAuthTypeSASLCRAMMD5):
+    [_authTypeItem.value[0] isEqualToString:@"PLAIN"]?                  @(MCOAuthTypeSASLPlain):
+    [_authTypeItem.value[0] isEqualToString:@"GSSAPI"]?                 @(MCOAuthTypeSASLGSSAPI):
+    [_authTypeItem.value[0] isEqualToString:@"DIGEST-MD5"]?             @(MCOAuthTypeSASLDIGESTMD5):
+    [_authTypeItem.value[0] isEqualToString:@"LOGIN"]?                  @(MCOAuthTypeSASLLogin):
+    [_authTypeItem.value[0] isEqualToString:@"Secure Remote Password"]? @(MCOAuthTypeSASLSRP):
+    [_authTypeItem.value[0] isEqualToString:@"NTLM"]?                   @(MCOAuthTypeSASLNTLM):
+    [_authTypeItem.value[0] isEqualToString:@"Kerberos 4"]?             @(MCOAuthTypeSASLKerberosV4):
+    [_authTypeItem.value[0] isEqualToString:@"OAuth2"]?                 @(MCOAuthTypeXOAuth2):
+    [_authTypeItem.value[0] isEqualToString:@"OAuth2(outlook.com)"]?    @(MCOAuthTypeXOAuth2Outlook):@(-1);
+
+    model.connectionType =
+    (_connectionTypeItem.value == 0)?@(MCOConnectionTypeClear):
+    (_connectionTypeItem.value == 1)?@(MCOConnectionTypeStartTLS):
+    (_connectionTypeItem.value == 2)?@(MCOConnectionTypeTLS):@(-1);
+    
+    [model saveModel];
+    
+    
+    //message表示
+    
+}
+
+#pragma mark - Private methods
 - (RETableViewSection *)addSmtpControls
 {
     //__typeof (&*self) __weak weakSelf = self;
@@ -108,7 +200,7 @@
     
     self.connectionTypeItem = [RESegmentedItem itemWithTitle:@"Connection Type"
                                       segmentedControlTitles:@[@"Clear-text", @"Start TLS",@"TLS"]
-                                                       value:1
+                                                       value:0
                                     switchValueChangeHandler:^(RESegmentedItem *item) {
                                         NSLog(@"Value: %li", (long)item.value);
                                     }];

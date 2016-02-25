@@ -24,16 +24,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //暗号化テスト
-    NSString *key = @"SimpleMail";
     NSString *plaintext = @"dongdong";
     
     //encrypt > base64enc
-    NSString *cipher = [plaintext AES256EncryptWithKey: key];
+    NSString *cipher = [plaintext AES256EncryptWithKey: kEncryptKeyString];
     
     NSLog(@"encode: %@", cipher);
     
     //base64dec -> decrypt
-    NSString *dec = [cipher AES256DecryptWithKey: key];
+    NSString *dec = [cipher AES256DecryptWithKey: kEncryptKeyString];
     NSLog(@"encode: %@", dec);
     
 }

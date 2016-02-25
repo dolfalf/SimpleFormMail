@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString *const kEncryptKeyString = @"simplemail";
+
 @class NSString;
 
 @interface NSString (Extension)

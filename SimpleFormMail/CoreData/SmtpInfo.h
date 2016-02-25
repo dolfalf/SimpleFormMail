@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SmtpInfo : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
-
++ (id)createModel;
++ (id)findModel;
+- (void)deleteModel;
+- (void)saveModel;
 @end
 
 NS_ASSUME_NONNULL_END
