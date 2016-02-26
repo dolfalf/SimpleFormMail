@@ -153,7 +153,7 @@
 
 - (void)addButtonTouched:(id)sender {
     
-    [StoryboardUtil gotoSettingViewController:self completion:nil];
+    [StoryboardUtil gotoEditMailViewController:self completion:nil];
 }
 
 #pragma mark - UITableView Helper

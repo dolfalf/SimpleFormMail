@@ -5,6 +5,49 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
+        <!--Templete Select Table View Controller-->
+        <scene sceneID="7OF-vt-aJM">
+            <objects>
+                <tableViewController storyboardIdentifier="TempleteSelectTableViewController" id="Ed5-lL-Zwa" customClass="TempleteSelectTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9uy-vX-6Lb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Q7o-FI-mCw">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q7o-FI-mCw" id="Sgn-Al-hKt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1G-3D-aaZ">
+                                            <rect key="frame" x="8" y="8" width="304" height="27"/>
+                                            <color key="backgroundColor" red="0.30196078430000001" green="0.73725490199999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="a1G-3D-aaZ" firstAttribute="top" secondItem="Sgn-Al-hKt" secondAttribute="top" constant="8" id="2hp-oe-i6x"/>
+                                        <constraint firstAttribute="bottom" secondItem="a1G-3D-aaZ" secondAttribute="bottom" constant="8" id="S1O-bc-lsg"/>
+                                        <constraint firstAttribute="trailing" secondItem="a1G-3D-aaZ" secondAttribute="trailing" constant="8" id="ckl-5I-C7X"/>
+                                        <constraint firstItem="a1G-3D-aaZ" firstAttribute="leading" secondItem="Sgn-Al-hKt" secondAttribute="leading" constant="8" id="nD9-0T-r1j"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ed5-lL-Zwa" id="yW5-nw-Gum"/>
+                            <outlet property="delegate" destination="Ed5-lL-Zwa" id="Kap-g1-p11"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jb4-PZ-hHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="-6"/>
+        </scene>
         <!--Top View Controller-->
         <scene sceneID="ERq-t7-I8h">
             <objects>
@@ -131,6 +174,7 @@
                     <navigationItem key="navigationItem" id="mjR-Xl-uhh"/>
                     <connections>
                         <outlet property="mainTableView" destination="A4w-fK-lIo" id="t3V-To-EF5"/>
+                        <segue destination="Ed5-lL-Zwa" kind="show" identifier="SelectTempleteSegue" id="y9m-IE-345"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUS-V6-4nU" userLabel="First Responder" sceneMemberID="firstResponder"/>

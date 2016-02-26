@@ -12,6 +12,7 @@
 #import "SmtpInfo.h"
 #import <MailCore/MCOConstants.h>
 #import "CoreDataManager.h"
+#import "SIAlertView.h"
 
 @interface SettingViewController ()
 
@@ -50,7 +51,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
     
     //
 //    CoreDataManager *mgr = [CoreDataManager sharedCoreDataManager];
@@ -160,7 +163,16 @@
     
     
     //message表示
+    SIAlertView *alertView = [[SIAlertView alloc] initWithTitle:@"設定" andMessage:@"設定情報を保存しました。"];
+    alertView.transitionStyle = SIAlertViewTransitionStyleFade;
+
+    [alertView addButtonWithTitle:@"確認"
+                             type:SIAlertViewButtonTypeDefault
+                          handler:^(SIAlertView *alertView) {
+                              //NSLog(@"Button1 Clicked");
+                          }];
     
+    [alertView show];
 }
 
 #pragma mark - Private methods

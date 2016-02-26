@@ -11,4 +11,5 @@
 @interface StoryboardUtil : NSObject
 
 + (void)gotoSettingViewController:(id)owner completion:(void(^)(void))completion;
++ (void)gotoEditMailViewController:(id)owner completion:(void(^)(void))completion;
 @end
