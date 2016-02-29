@@ -2,7 +2,7 @@
 //  SmtpInfo+CoreDataProperties.m
 //  SimpleFormMail
 //
-//  Created by lee jaeeun on 2016/02/22.
+//  Created by lee jaeeun on 2016/02/29.
 //  Copyright © 2016年 kj-code. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,11 +13,12 @@
 
 @implementation SmtpInfo (CoreDataProperties)
 
-@dynamic username;
+@dynamic authType;
+@dynamic connectionType;
 @dynamic hostname;
 @dynamic password;
 @dynamic port;
-@dynamic authType;
-@dynamic connectionType;
+@dynamic selectProvider;
+@dynamic username;
 
 @end

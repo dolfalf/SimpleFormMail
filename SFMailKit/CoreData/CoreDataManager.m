@@ -56,9 +56,14 @@ static CoreDataManager *coredataManager;
     if (_perStoreCoordinator != nil) {
         return _perStoreCoordinator;
     }
-
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite",ManagerObjectModelFileName]];
     
+#if 1
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite",ManagerObjectModelFileName]];
+
+#else
+    NSURL *storeURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.kjcode.dolfalf.SimpleFormmail"];
+    storeURL = [storeURL URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite",ManagerObjectModelFileName]];
+#endif
     NSLog(@"path = %@",storeURL.path);
     NSError *error = nil;
     _perStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjModel]];

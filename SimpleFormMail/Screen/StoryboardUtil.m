@@ -8,6 +8,8 @@
 
 #import "StoryboardUtil.h"
 #import "SettingViewController.h"
+#import "SMTPSettingTableViewController.h"
+
 #import "EditMailViewController.h"
 
 @implementation StoryboardUtil
@@ -22,6 +24,18 @@
     if (completion) {
         completion();
     }
+}
+
++ (void)gotoSMTPSettingViewController:(id)owner screenType:(SMTPSettingType)screenType completion:(void(^)(void))completion {
+    
+    SMTPSettingTableViewController *desc_con = [[SMTPSettingTableViewController alloc] initWithScreenType:screenType];
+    
+    [((UIViewController *)owner).navigationController pushViewController:desc_con animated:YES];
+    
+    if (completion) {
+        completion();
+    }
+    
 }
 
 + (void)gotoEditMailViewController:(id)owner completion:(void(^)(void))completion {

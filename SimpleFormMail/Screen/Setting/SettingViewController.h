@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <RETableViewManager/RETableViewManager.h>
-#import "RETableViewOptionsController.h"
 
 @interface SettingViewController : UITableViewController <RETableViewManagerDelegate>
 
