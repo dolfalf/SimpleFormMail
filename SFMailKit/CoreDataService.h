@@ -16,6 +16,8 @@ typedef NS_ENUM(NSInteger, ServiceProvidor) {
 
 @interface CoreDataService : NSObject
 
++ (void)insertMasterData:(NSDictionary *)dict;
+
 + (NSDictionary *)smtpInfo;
 + (void)saveSmtpInfo:(NSDictionary *)info;
 + (ServiceProvidor)serviceProvidorType;

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Xcode 7.0">
+    <entity name="ContentMaster" representedClassName="ContentMaster" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="defaultFlag" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
     <entity name="SmtpInfo" representedClassName="SmtpInfo" syncable="YES">
         <attribute name="authType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="connectionType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -17,8 +22,15 @@
         <attribute name="from" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="to" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="TitleMaster" representedClassName="TitleMaster" syncable="YES">
+        <attribute name="defaultFlag" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titleId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
     <elements>
+        <element name="ContentMaster" positionX="-54" positionY="54" width="128" height="90"/>
         <element name="SmtpInfo" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="TempleteMails" positionX="-63" positionY="9" width="128" height="135"/>
+        <element name="TitleMaster" positionX="-63" positionY="45" width="128" height="90"/>
     </elements>
 </model>

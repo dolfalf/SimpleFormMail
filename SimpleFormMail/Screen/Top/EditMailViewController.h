@@ -11,4 +11,5 @@
 
 @interface EditMailViewController : UITableViewController <RETableViewManagerDelegate>
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
 @end

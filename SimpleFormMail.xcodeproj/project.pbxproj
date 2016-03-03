@@ -41,6 +41,7 @@
 		BB302F7C1C7C3DDB00942B30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB302F7B1C7C3DDB00942B30 /* ViewController.m */; };
 		BB302F7E1C7C3FE300942B30 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB302F7D1C7C3FE300942B30 /* Setting.storyboard */; };
 		BB354BAF1C7AD7B100B8E4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB354BAD1C7AD7B100B8E4FD /* Main.storyboard */; };
+		BB4E3BAB1C86AAF100DD1EF2 /* NSUserDefaults+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4E3BAA1C86AAF100DD1EF2 /* NSUserDefaults+Setting.m */; };
 		BB5B8DE41C7FD67700D571D9 /* SIAlertView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB5B8DDF1C7FD67700D571D9 /* SIAlertView.bundle */; };
 		BB5B8DE51C7FD67700D571D9 /* SIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5B8DE11C7FD67700D571D9 /* SIAlertView.m */; };
 		BB5B8DE61C7FD67700D571D9 /* UIWindow+SIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5B8DE31C7FD67700D571D9 /* UIWindow+SIUtils.m */; };
@@ -50,7 +51,16 @@
 		BB8424B61C842B86002BDD06 /* UserSettingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB8424B31C842B81002BDD06 /* UserSettingModel.xcdatamodeld */; };
 		BBA673EF1C7AEEA900380469 /* TempleteContents.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBA673EE1C7AEEA900380469 /* TempleteContents.plist */; };
 		BBA673F11C7AEF7E00380469 /* TempleteTitles.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBA673F01C7AEF7E00380469 /* TempleteTitles.plist */; };
+		BBE8D8A31C86EAC6003B20D7 /* UIColor+SFMail.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE8D8A21C86EAC6003B20D7 /* UIColor+SFMail.m */; };
 		BBEDCAA61C80460500462527 /* TempleteSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEDCAA51C80460500462527 /* TempleteSelectTableViewController.m */; };
+		BBF1167E1C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF116761C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.h */; };
+		BBF1167F1C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF116771C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.m */; };
+		BBF116801C851E6F00FFAD9C /* ContentMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF116781C851E6F00FFAD9C /* ContentMaster.h */; };
+		BBF116811C851E6F00FFAD9C /* ContentMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF116791C851E6F00FFAD9C /* ContentMaster.m */; };
+		BBF116821C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF1167A1C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.h */; };
+		BBF116831C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF1167B1C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.m */; };
+		BBF116841C851E6F00FFAD9C /* TitleMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF1167C1C851E6F00FFAD9C /* TitleMaster.h */; };
+		BBF116851C851E6F00FFAD9C /* TitleMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF1167D1C851E6F00FFAD9C /* TitleMaster.m */; };
 		BBFDC2A61C7D340800958864 /* StoryboardUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC2A51C7D340800958864 /* StoryboardUtil.m */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +156,8 @@
 		BB302F7D1C7C3FE300942B30 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		BB354BAE1C7AD7B100B8E4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SimpleFormMail/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		BB354BB01C7AD9B000B8E4FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BB4E3BA91C86AAF100DD1EF2 /* NSUserDefaults+Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Setting.h"; sourceTree = "<group>"; };
+		BB4E3BAA1C86AAF100DD1EF2 /* NSUserDefaults+Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Setting.m"; sourceTree = "<group>"; };
 		BB5B8DDF1C7FD67700D571D9 /* SIAlertView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SIAlertView.bundle; sourceTree = "<group>"; };
 		BB5B8DE01C7FD67700D571D9 /* SIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIAlertView.h; sourceTree = "<group>"; };
 		BB5B8DE11C7FD67700D571D9 /* SIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIAlertView.m; sourceTree = "<group>"; };
@@ -159,8 +171,18 @@
 		BB8424B41C842B81002BDD06 /* UserSettingModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserSettingModel.xcdatamodel; sourceTree = "<group>"; };
 		BBA673EE1C7AEEA900380469 /* TempleteContents.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TempleteContents.plist; sourceTree = "<group>"; };
 		BBA673F01C7AEF7E00380469 /* TempleteTitles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TempleteTitles.plist; sourceTree = "<group>"; };
+		BBE8D8A11C86EAC6003B20D7 /* UIColor+SFMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SFMail.h"; sourceTree = "<group>"; };
+		BBE8D8A21C86EAC6003B20D7 /* UIColor+SFMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SFMail.m"; sourceTree = "<group>"; };
 		BBEDCAA41C80460500462527 /* TempleteSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleteSelectTableViewController.h; sourceTree = "<group>"; };
 		BBEDCAA51C80460500462527 /* TempleteSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleteSelectTableViewController.m; sourceTree = "<group>"; };
+		BBF116761C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ContentMaster+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BBF116771C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ContentMaster+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BBF116781C851E6F00FFAD9C /* ContentMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentMaster.h; sourceTree = "<group>"; };
+		BBF116791C851E6F00FFAD9C /* ContentMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentMaster.m; sourceTree = "<group>"; };
+		BBF1167A1C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TitleMaster+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BBF1167B1C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TitleMaster+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BBF1167C1C851E6F00FFAD9C /* TitleMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleMaster.h; sourceTree = "<group>"; };
+		BBF1167D1C851E6F00FFAD9C /* TitleMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleMaster.m; sourceTree = "<group>"; };
 		BBFDC2A41C7D340800958864 /* StoryboardUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryboardUtil.h; sourceTree = "<group>"; };
 		BBFDC2A51C7D340800958864 /* StoryboardUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +336,14 @@
 				BB12E2181C83D41800380EC3 /* SmtpInfo+CoreDataProperties.m */,
 				BB12E2191C83D41800380EC3 /* SmtpInfo.h */,
 				BB12E21A1C83D41800380EC3 /* SmtpInfo.m */,
+				BBF1167A1C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.h */,
+				BBF1167B1C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.m */,
+				BBF1167C1C851E6F00FFAD9C /* TitleMaster.h */,
+				BBF1167D1C851E6F00FFAD9C /* TitleMaster.m */,
+				BBF116761C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.h */,
+				BBF116771C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.m */,
+				BBF116781C851E6F00FFAD9C /* ContentMaster.h */,
+				BBF116791C851E6F00FFAD9C /* ContentMaster.m */,
 				BB12E21B1C83D41800380EC3 /* TempleteMails+CoreDataProperties.h */,
 				BB12E21C1C83D41800380EC3 /* TempleteMails+CoreDataProperties.m */,
 				BB12E21D1C83D41800380EC3 /* TempleteMails.h */,
@@ -392,6 +422,10 @@
 			children = (
 				BB60066F1C7D8A9800D77771 /* UIImage+Extension.h */,
 				BB6006701C7D8A9800D77771 /* UIImage+Extension.m */,
+				BB4E3BA91C86AAF100DD1EF2 /* NSUserDefaults+Setting.h */,
+				BB4E3BAA1C86AAF100DD1EF2 /* NSUserDefaults+Setting.m */,
+				BBE8D8A11C86EAC6003B20D7 /* UIColor+SFMail.h */,
+				BBE8D8A21C86EAC6003B20D7 /* UIColor+SFMail.m */,
 			);
 			name = Util;
 			path = SimpleFormMail/Util;
@@ -424,13 +458,17 @@
 			files = (
 				BB12E2251C83D41800380EC3 /* SmtpInfo.h in Headers */,
 				BB12E2301C83D49D00380EC3 /* CoreDataService.h in Headers */,
+				BBF116821C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.h in Headers */,
+				BBF1167E1C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.h in Headers */,
 				BB12E2271C83D41800380EC3 /* TempleteMails+CoreDataProperties.h in Headers */,
+				BBF116801C851E6F00FFAD9C /* ContentMaster.h in Headers */,
 				BB12E23F1C83DD3A00380EC3 /* Base64.h in Headers */,
 				BB12E2231C83D41800380EC3 /* SmtpInfo+CoreDataProperties.h in Headers */,
 				BB12E2341C83D4B400380EC3 /* CoreDataManager.h in Headers */,
 				BB12E2411C83DD3A00380EC3 /* NSData+Extension.h in Headers */,
 				BB12E1FB1C83D28E00380EC3 /* SFMailKit.h in Headers */,
 				BB12E2291C83D41800380EC3 /* TempleteMails.h in Headers */,
+				BBF116841C851E6F00FFAD9C /* TitleMaster.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +707,8 @@
 				BB5B8DE61C7FD67700D571D9 /* UIWindow+SIUtils.m in Sources */,
 				BB12E2391C83D7B100380EC3 /* SMTPSettingTableViewController.m in Sources */,
 				BB0E262A1C7BE5B700EFEDC0 /* TopViewController.m in Sources */,
+				BBE8D8A31C86EAC6003B20D7 /* UIColor+SFMail.m in Sources */,
+				BB4E3BAB1C86AAF100DD1EF2 /* NSUserDefaults+Setting.m in Sources */,
 				1C574B6B1C782DF50052B928 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,13 +725,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF116831C851E6F00FFAD9C /* TitleMaster+CoreDataProperties.m in Sources */,
+				BBF116851C851E6F00FFAD9C /* TitleMaster.m in Sources */,
 				BB12E2401C83DD3A00380EC3 /* Base64.m in Sources */,
 				BB12E2351C83D4B400380EC3 /* CoreDataManager.m in Sources */,
 				BB12E22A1C83D41800380EC3 /* TempleteMails.m in Sources */,
 				BB8424B61C842B86002BDD06 /* UserSettingModel.xcdatamodeld in Sources */,
+				BBF116811C851E6F00FFAD9C /* ContentMaster.m in Sources */,
 				BB12E2241C83D41800380EC3 /* SmtpInfo+CoreDataProperties.m in Sources */,
 				BB12E2261C83D41800380EC3 /* SmtpInfo.m in Sources */,
 				BB12E2311C83D49D00380EC3 /* CoreDataService.m in Sources */,
+				BBF1167F1C851E6F00FFAD9C /* ContentMaster+CoreDataProperties.m in Sources */,
 				BB12E2421C83DD3A00380EC3 /* NSData+Extension.m in Sources */,
 				BB12E2281C83D41800380EC3 /* TempleteMails+CoreDataProperties.m in Sources */,
 			);

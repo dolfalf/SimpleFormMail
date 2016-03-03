@@ -18,5 +18,5 @@ typedef NS_ENUM(NSInteger, SMTPSettingType) {
 + (void)gotoSettingViewController:(id)owner completion:(void(^)(void))completion;
 + (void)gotoSMTPSettingViewController:(id)owner screenType:(SMTPSettingType)screenType completion:(void(^)(void))completion;
 
-+ (void)gotoEditMailViewController:(id)owner completion:(void(^)(void))completion;
++ (void)gotoEditMailViewController:(id)owner param:(NSDictionary *)paramDict completion:(void(^)(void))completion;
 @end

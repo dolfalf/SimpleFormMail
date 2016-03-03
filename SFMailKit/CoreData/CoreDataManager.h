@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "SmtpInfo.h"
+#import "TitleMaster.h"
+#import "ContentMaster.h"
 
 #define ManagerObjectModelFileName @"UserSettingModel"
 

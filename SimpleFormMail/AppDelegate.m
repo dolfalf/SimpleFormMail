@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NSUserDefaults+Setting.h"
+#import <SFMailKit/CoreDataService.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    [NSUserDefaults initializeUserSetting];
+    
+    //load master
+    
     return YES;
 }
 
@@ -40,6 +48,74 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+@end
+
+@implementation AppDelegate (Master)
+
+- (void)loadMasterData {
+    
+    //タイトル、本文テンプレートをCoreDataへロード
+    
+    //CoreDataのバージョン
+    if ([self isUpdateCoredata]) {
+        return;
+    }
+    
+    //Plistから読み込み
+    NSArray *title_items = [self readTitlePlist];
+    NSString *content_items = [self readContentPlist];
+    
+    //CoreDataの更新処理
+    
+    
+    
+    
+}
+
+#pragma mark - helper methods
+- (BOOL)isUpdateCoredata {
+    
+    NSArray *version_array = [[NSUserDefaults loadMasterVersion] componentsSeparatedByString:@"."];
+    
+    int version_num = 0;
+    for (int i=0; i< version_array.count; i++) {
+        version_num = version_num + pow([version_array[i] integerValue],i);
+    }
+    
+    
+    NSArray *current_version_array = [@"0.9" componentsSeparatedByString:@"."];
+    int current_version_num = 0;
+    for (int i=0; i< current_version_array.count; i++) {
+        current_version_num = current_version_num + pow([current_version_array[i] integerValue],i);
+    }
+    
+    if (current_version_num  >= version_num) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (NSArray *)readTitlePlist {
+    
+    //読み込むファイルパスを指定
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"TempleteTitles" ofType:@"plist"];
+    NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *items =[NSArray arrayWithArray:[dict objectForKey:@"Root"]];
+    
+    return items;
+}
+
+- (NSArray *)readContentPlist {
+    
+    //読み込むファイルパスを指定
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"TempleteContents" ofType:@"plist"];
+    NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSArray *items =[NSArray arrayWithArray:[dict objectForKey:@"Root"]];
+    
+    return items;
 }
 
 @end

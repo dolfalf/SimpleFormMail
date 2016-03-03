@@ -20,7 +20,7 @@
     return model;
 }
 
-+ (id)findModel {
++ (id)loadModel {
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"SmtpInfo"

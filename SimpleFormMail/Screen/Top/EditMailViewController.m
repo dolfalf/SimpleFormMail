@@ -11,6 +11,8 @@
 
 @interface EditMailViewController ()
 
+@property (strong, nonatomic) NSDictionary *paramDict;
+
 @property (strong, nonatomic) RETableViewManager *manager;
 
 @property (strong, nonatomic) RETableViewSection *mailSection;
@@ -34,22 +36,25 @@
 
 @implementation EditMailViewController
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict {
+    self = [super init];
+    
+    if (self) {
+        //Initialize
+        self.paramDict = dict;
+    }
+    
+    return self;
+}
+
 #pragma mark - Life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"新規テンプレート作成";
+    
+    self.title = (_paramDict == nil)?@"新規テンプレート作成":@"";
     
     [self initControls];
-    
-    // Create manager
-    //
-    self.manager = [[RETableViewManager alloc] initWithTableView:self.tableView delegate:self];
-    
-    self.mailSection = [self addMailControls];
-    self.titleSection = [self addTitleControls];
-    self.contentSection = [self addContentControls];
-    self.buttonSection = [self addButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -73,6 +78,14 @@
 
 #pragma mark - private methods
 - (void)initControls {
+    
+    // Create manager
+    self.manager = [[RETableViewManager alloc] initWithTableView:self.tableView delegate:self];
+    
+    self.mailSection = [self addMailControls];
+    self.titleSection = [self addTitleControls];
+    self.contentSection = [self addContentControls];
+    self.buttonSection = [self addButton];
     
 }
 

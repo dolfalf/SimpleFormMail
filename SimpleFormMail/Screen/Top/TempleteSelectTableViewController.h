@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, TempleteSelectType) {
+    TempleteSelectTypeTitle = 0,
+    TempleteSelectTypeContent,
+};
+
 @interface TempleteViewCell : UITableViewCell
 
 @end
 
 @interface TempleteSelectTableViewController : UITableViewController
 
+- (instancetype)initWithScreenType:(TempleteSelectType)type;
 @end

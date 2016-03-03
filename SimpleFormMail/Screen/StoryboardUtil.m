@@ -38,9 +38,9 @@
     
 }
 
-+ (void)gotoEditMailViewController:(id)owner completion:(void(^)(void))completion {
++ (void)gotoEditMailViewController:(id)owner param:(NSDictionary *)paramDict completion:(void(^)(void))completion {
     
-    EditMailViewController *desc_con = [[EditMailViewController alloc] init];
+    EditMailViewController *desc_con = [[EditMailViewController alloc] initWithDictionary:paramDict];
     UINavigationController *desc_navi = [[UINavigationController alloc] initWithRootViewController:desc_con];
     
     [owner presentViewController:desc_navi animated:YES completion:nil];

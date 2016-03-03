@@ -12,9 +12,51 @@
 
 @implementation CoreDataService
 
++ (void)insertMasterData:(NSDictionary *)dict {
+    
+    if (dict == nil) {
+        return;
+    }
+    
+    //Title
+    if (dict[@"title_items"] != nil) {
+        
+        NSArray *title_items = dict[@"title_items"];
+        
+        NSArray *models = [TitleMaster findDefaultModel];
+        for (TitleMaster *model in models) {
+            [(TitleMaster *)model deleteModel];
+        }
+        
+        for (NSString *title in title_items) {
+            TitleMaster *new_model = [TitleMaster createModel];
+            new_model.title = title;
+        }
+    }
+    
+    //Content
+    if (dict[@"content_items"] != nil) {
+        
+        NSArray *content_items = dict[@"content_items"];
+        
+        NSArray *models = [ContentMaster findDefaultModel];
+        for (ContentMaster *model in models) {
+            [(ContentMaster *)model deleteModel];
+        }
+        
+        for (NSString *content in content_items) {
+            ContentMaster *new_model = [ContentMaster createModel];
+            new_model.content = content;
+        }
+    }
+    
+    //まとめて保存
+    [[CoreDataManager sharedCoreDataManager] saveContext];
+}
+
 + (NSDictionary *)smtpInfo {
     
-    SmtpInfo *model = [SmtpInfo findModel];
+    SmtpInfo *model = [SmtpInfo loadModel];
     
     if (model) {
         
@@ -57,7 +99,7 @@
 
 + (void)saveSmtpInfo:(NSDictionary *)info {
     
-    SmtpInfo *model = [SmtpInfo findModel];
+    SmtpInfo *model = [SmtpInfo loadModel];
     
     if (model == nil) {
         model = [SmtpInfo createModel];

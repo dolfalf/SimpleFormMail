@@ -15,3 +15,8 @@
 
 @end
 
+
+@interface AppDelegate (Master)
+
+- (void)loadMasterData;
+@end

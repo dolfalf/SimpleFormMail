@@ -9,7 +9,6 @@
 #import "SMTPSettingTableViewController.h"
 
 #import "NSData+Extension.h"
-#import "SmtpInfo.h"
 #import <MailCore/MCOConstants.h>
 #import "CoreDataManager.h"
 #import "SIAlertView.h"
@@ -66,10 +65,23 @@
     
     [super viewWillAppear:animated];
 
-    SmtpInfo *model = [SmtpInfo findModel];
+    SmtpInfo *model = [SmtpInfo loadModel];
     
     if (model) {
-        //
+        
+        //表示初期化
+        if (_screenType != [model.selectProvider integerValue]) {
+
+            _usernameItem.value = @"";
+            _passwordItem.value = @"";
+            _hostnameItem.value = @"";
+            _portItem.value = @"";
+            _authTypeItem.value = @[@"None"];
+            _connectionTypeItem.value = 0;
+                
+            return;
+        }
+        
         _usernameItem.value = model.username;
         NSString *dec_password = [model.password AES256DecryptWithKey:kEncryptKeyString];
         _passwordItem.value = dec_password;
@@ -78,8 +90,6 @@
             
             _hostnameItem.value = model.hostname;
             _portItem.value = [NSString stringWithFormat:@"%ld",(long)model.port.integerValue];
-            
-            
             
             if (model.selectProvider == SMTPSettingTypeCustom) {
                 
@@ -102,12 +112,6 @@
                 model.connectionType.integerValue == MCOConnectionTypeClear?    0:
                 model.connectionType.integerValue == MCOConnectionTypeStartTLS? 1:
                 model.connectionType.integerValue == MCOConnectionTypeTLS?      2:0;
-            }else {
-                _hostnameItem.value = @"";
-                _portItem.value = @"";
-                _authTypeItem.value = @[@"None"];
-                _connectionTypeItem.value = 0;
-                
             }
         }
         
@@ -151,7 +155,7 @@
 
 - (void)saveButtonTouched:(id)sender {
     
-    SmtpInfo *model = [SmtpInfo findModel];
+    SmtpInfo *model = [SmtpInfo loadModel];
     if (model == nil) {
         model = [SmtpInfo createModel];
     }
