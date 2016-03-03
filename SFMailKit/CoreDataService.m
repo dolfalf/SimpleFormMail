@@ -10,6 +10,9 @@
 #import "CoreDataManager.h"
 #import "NSData+Extension.h"
 
+NSString * const kTitleMasterKey = @"title_items";
+NSString * const kContentMasterKey = @"content_items";
+
 @implementation CoreDataService
 
 + (void)insertMasterData:(NSDictionary *)dict {
@@ -19,34 +22,40 @@
     }
     
     //Title
-    if (dict[@"title_items"] != nil) {
+    if (dict[kTitleMasterKey] != nil) {
         
-        NSArray *title_items = dict[@"title_items"];
+        NSArray *title_items = dict[kTitleMasterKey];
         
         NSArray *models = [TitleMaster findDefaultModel];
         for (TitleMaster *model in models) {
             [(TitleMaster *)model deleteModel];
         }
         
+        int count = 1;
         for (NSString *title in title_items) {
             TitleMaster *new_model = [TitleMaster createModel];
+            new_model.titleId = @(count++);
             new_model.title = title;
+            new_model.defaultFlag = @YES;
         }
     }
     
     //Content
-    if (dict[@"content_items"] != nil) {
+    if (dict[kContentMasterKey] != nil) {
         
-        NSArray *content_items = dict[@"content_items"];
+        NSArray *content_items = dict[kContentMasterKey];
         
         NSArray *models = [ContentMaster findDefaultModel];
         for (ContentMaster *model in models) {
             [(ContentMaster *)model deleteModel];
         }
         
+        int count = 1;
         for (NSString *content in content_items) {
             ContentMaster *new_model = [ContentMaster createModel];
+            new_model.contentId = @(count++);
             new_model.content = content;
+            new_model.defaultFlag = @YES;
         }
     }
     

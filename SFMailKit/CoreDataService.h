@@ -14,6 +14,9 @@ typedef NS_ENUM(NSInteger, ServiceProvidor) {
     ServiceProvidorGmail,
 };
 
+extern NSString * const kTitleMasterKey;
+extern NSString * const kContentMasterKey;
+
 @interface CoreDataService : NSObject
 
 + (void)insertMasterData:(NSDictionary *)dict;

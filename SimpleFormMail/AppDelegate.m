@@ -24,6 +24,7 @@
     [NSUserDefaults initializeUserSetting];
     
     //load master
+    [self loadMasterData];
     
     return YES;
 }
@@ -65,10 +66,11 @@
     
     //Plistから読み込み
     NSArray *title_items = [self readTitlePlist];
-    NSString *content_items = [self readContentPlist];
+    NSArray *content_items = [self readContentPlist];
     
     //CoreDataの更新処理
-    
+    [CoreDataService insertMasterData:@{kTitleMasterKey:title_items,
+                                        kContentMasterKey:content_items}];
     
     
     
@@ -100,22 +102,17 @@
 
 - (NSArray *)readTitlePlist {
     
-    //読み込むファイルパスを指定
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"TempleteTitles" ofType:@"plist"];
-    NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *items =[NSArray arrayWithArray:[dict objectForKey:@"Root"]];
+    NSString* propertyDataFile = [[NSBundle mainBundle]pathForResource:@"TempleteTitles" ofType:@"plist"];
+    NSArray *arrayDataList = [NSArray arrayWithContentsOfFile:propertyDataFile];
     
-    return items;
+    return arrayDataList;
 }
 
 - (NSArray *)readContentPlist {
     
-    //読み込むファイルパスを指定
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"TempleteContents" ofType:@"plist"];
-    NSDictionary* dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    NSArray *items =[NSArray arrayWithArray:[dict objectForKey:@"Root"]];
-    
-    return items;
+    NSString* propertyDataFile = [[NSBundle mainBundle]pathForResource:@"TempleteContents" ofType:@"plist"];
+    NSArray *arrayDataList = [NSArray arrayWithContentsOfFile:propertyDataFile];
+    return arrayDataList;
 }
 
 @end

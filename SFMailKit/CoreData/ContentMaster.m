@@ -55,7 +55,7 @@
 + (NSArray *)findDefaultModel {
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CoreDataManager"
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"ContentMaster"
                                               inManagedObjectContext:[CoreDataManager sharedCoreDataManager].managedObjContext];
     [request setEntity:entity];
     
@@ -63,7 +63,7 @@
     // but the properties are preloaded
     [request setReturnsObjectsAsFaults:NO];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"titleId" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"contentId" ascending:NO];
     NSArray *sortDescriptions = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     [request setSortDescriptors:sortDescriptions];
     
